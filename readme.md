@@ -11,3 +11,4 @@ You can also change the text of the button in the "Read More Button" admin page,
 
 ## Installation
 Place the root folder of this repo in the plugins folder of your WordPress installation. The plugin folder must be named `wp-mobile-read-more-button`.
+
