@@ -1,15 +1,5 @@
-=== Read More Mobile Button ===
-Contributors: travismorrisonwp
-Tags: Mobile, Read More, Truncate, Posts
-Requires at least: 4.0
-Tested up to: 4.6.1
-Stable tag: 4.6.1
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+# WordPress "Read More" Mobile Button Plugin
 
-This plugin will enable a WordPress site to truncate its posts with a "Read More" button in mobile contexts. No shortcodes are used; it automagically shortens the post content based on user settings and the viewport height.
-
-== Description ==
 This plugin will enable a WordPress site to truncate its posts with a "Read More" button in mobile. No shortcodes are used.
 It will truncate the *article* tag on a post.
 The amount of content that will be visible is determined by the "height of visible content" option. Instead of using pixels, it uses
@@ -18,12 +8,5 @@ the button will be 1400px down from the top of the page. If you want the button 
 you would set this value to 1.
 You can also change the text of the button in the "Read More Button" admin page, which is found in the settings menu.
 
-== Installation ==
-1. Activate the plugin. That's it!
-
-== Screenshots ==
-1. The admin page
-2. The execution
-
-= 0.1 =
-Initial Release
+## Installation
+Place the root folder of this repo in the plugins folder of your WordPress installation. The plugin folder must be named `wp-mobile-read-more-button`.
