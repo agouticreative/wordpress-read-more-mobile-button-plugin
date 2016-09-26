@@ -24,7 +24,6 @@ readMoreBuffer = {
     },
 
     mergeOptions: function() {
-        console.log(readMoreOptions);
         if(!readMoreOptions) return;
         for(optionalFieldKey in this.optionalFields) {
             optionalField = this.optionalFields[optionalFieldKey]
@@ -69,17 +68,17 @@ readMoreBuffer = {
     },
 
     renderBufferZone: function () {
-        this.insertButtonHtml();
-        this.$entryContent.addClass('readmore-truncated');
-        this.$entryFooter.css('display', 'none');
         this.setContentHeight();
+        this.$entryContent.addClass('readmore-truncated');
+        this.insertButtonHtml();
+        this.$entryFooter.css('display', 'none');
         this.setClickEvent();
     },
 
     insertButtonHtml: function () {
         this.$entryContent.after(this.html);
         this.setReadMoreButtonEls();
-        this.$readMoreButton.text(this.buttonText);
+        this.$readMoreButton.html(this.buttonText);
     },
 
     setReadMoreButtonEls: function() {
@@ -101,6 +100,5 @@ readMoreBuffer = {
         this.$entryFooter.css('display', 'block');
     },
 }
-
-readMoreBuffer.exec();
+jQuery(window).load(function() {readMoreBuffer.exec()});
 

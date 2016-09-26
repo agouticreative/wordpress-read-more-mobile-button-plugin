@@ -1,4 +1,4 @@
-=== Automatic Read More Button ===
+=== WP Mobile Read More Button ===
 Contributors: travismorrisonwp
 Tags: Mobile, Read More, Truncate, Posts
 Requires at least: 4.0

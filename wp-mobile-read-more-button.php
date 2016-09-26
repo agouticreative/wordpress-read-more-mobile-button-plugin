@@ -17,7 +17,7 @@ Domain Path: /languages
 */
 
 
-require_once('wp-automatic-read-more-button-options.php');
+require_once('wp-mobile-read-more-button-options.php');
 
 function armb_render_options()
 {
@@ -27,7 +27,7 @@ function armb_render_options()
         <script>
             readMoreOptions = {
                 viewportMultiples: <?= $armb_height_multiple ?>,
-                buttonText: "<?= $armb_btn_txt ?>"
+                buttonText: "<?= esc_html($armb_btn_txt) ?>"
             }
         </script>
     <?php
@@ -36,16 +36,16 @@ function armb_render_options()
 if (get_option('armb_activated', true)) {
     add_action('wp_head', 'armb_render_options');
     wp_enqueue_style(
-        'wp-automatic-read-more-css',
-        plugins_url('wp-automatic-read-more-button/wp-automatic-read-more-button.css'),
+        'wp-mobile-more-button-css',
+        plugins_url('wp-mobile-read-more-button/wp-mobile-read-more-button.css'),
         array(),
         false,
         'screen and (max-width:768px)'
     );
 
     wp_enqueue_script(
-        'wp-automatic-read-more-js',
-        plugins_url('wp-automatic-read-more-button/wp-automatic-read-more-button.js'),
+        'wp-mobile-more-button-js',
+        plugins_url('wp-mobile-read-more-button/wp-mobile-read-more-button.js'),
         array('jquery'),
         '0.1',
         true
